@@ -1,0 +1,53 @@
+-> Create a New Folder
+-> Make apidoc.json or npm init(for package.json)
+-> in command Line:/> apidoc
+
+-> Make a new file inside created folder(say finalFile)
+-> Create a function for api documentation
+
+/** -> start of api doc
+*/ -> End of api doc
+* -> for inline part (code)
+
+There are 3-parameter (important
+1. @api-> It describes the path of the method to that clients call
+2. @apiName -> Unique Name just for simplicity.
+3. @apiGroup -> Name of group to which this method belong. Used for Navigation.
+For eg:-
+  /user(part)
+  /domain
+
+# Every time certain api gets change run the command
+  :/>apidoc
+
+# To run file in local server
+  :/>http-server
+
+@apiSuccess {string} name "Description"
+  @apiSuccess -> Show Success-Response
+  {string} -> Type of data type
+  name -> Field
+  Description -> Description about success response
+
+@apiVersion 0.1.0 -> Current Version
+@apiSuccessExample -> It creates a tab that will tell when we have successful api request
+  So, if there is certain change in content then add respective data in @apiSuccess {string} & @apiSuccessExample(in JSON formate)
+
+@api {get} /user/:id -> for api which contain parameter
+
+@apiParam {Number} paramData Description
+    1. @apiParam -> Syntax for Parameter
+    2. {Number} -> Type
+    3. {paramData} -> for determining paramData
+    4. Description -> Description for parameter
+
+@apiError UserNotFound Description
+  1. @apiError -> Syntax forError 4xx.
+  2. UserNotFound -> field
+  3. Description -> Description of error
+
+@apiErrorExample Error-Response
+  1. @apiErrorExample -> Syntax for response error
+  2. Error-Response -> Error description in tab
+
+# With Change in group user API changes which will be listed in left side of page through which we can navigate
