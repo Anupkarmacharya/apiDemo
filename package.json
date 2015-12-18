@@ -1,0 +1,11 @@
+{
+  "name": "finalAPI",
+  "version": "0.0.1",
+  "description": "multi api documentation data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
